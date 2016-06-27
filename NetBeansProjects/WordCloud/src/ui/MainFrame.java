@@ -5,17 +5,23 @@
  */
 package ui;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  *
  * @author veikko
  */
 public class MainFrame extends javax.swing.JFrame {
+    
+    private  Collection<String> words;
 
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
+        words=new ArrayList<>();
     }
 
     /**
@@ -141,6 +147,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         ShowFrame frame=new ShowFrame();
         frame.setSize(1000, 600);
+        frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.setLocation(50, 50);
         frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
