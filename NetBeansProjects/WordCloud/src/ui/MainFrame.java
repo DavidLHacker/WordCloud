@@ -10,21 +10,24 @@ import java.util.Collection;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+import javax.swing.ListModel;
 
 /**
  *
  * @author veikko
  */
 public class MainFrame extends javax.swing.JFrame {
-    
-    private  List<String> words;
+
+    private List<String> words;
 
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
-        words=new ArrayList<String>();
+        words = new ArrayList<String>();
     }
 
     /**
@@ -43,10 +46,10 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListWords = new javax.swing.JList<>();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldWord = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
 
@@ -85,12 +88,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel6.setLayout(new java.awt.BorderLayout());
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        jListWords.setToolTipText("");
+        jScrollPane1.setViewportView(jListWords);
 
         jTabbedPane1.addTab("Content", jScrollPane1);
 
@@ -113,12 +112,17 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel5.setPreferredSize(new java.awt.Dimension(250, 75));
 
-        jTextField2.setMinimumSize(new java.awt.Dimension(100, 27));
-        jTextField2.setPreferredSize(new java.awt.Dimension(200, 27));
-        jPanel5.add(jTextField2);
+        jTextFieldWord.setMinimumSize(new java.awt.Dimension(100, 27));
+        jTextFieldWord.setPreferredSize(new java.awt.Dimension(200, 27));
+        jPanel5.add(jTextFieldWord);
 
         jButton4.setText("Add Word");
         jButton4.setPreferredSize(new java.awt.Dimension(200, 31));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel5.add(jButton4);
 
         jPanel2.add(jPanel5, java.awt.BorderLayout.SOUTH);
@@ -145,12 +149,27 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        ShowFrame frame=new ShowFrame();
+        ShowFrame frame = new ShowFrame();
         frame.setSize(1000, 600);
         frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.setLocation(50, 50);
         frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        String newWord = jTextFieldWord.getText();
+        if (newWord.equals("") == false) {
+            words.add(newWord);
+            DefaultListModel listmodel = new DefaultListModel();
+            for (int i = 0; i < words.size(); i++) {
+                listmodel.addElement(words.get(i));
+            }
+
+            jListWords.setModel(listmodel);
+
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +210,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jListWords;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -199,7 +218,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextFieldWord;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 }
