@@ -150,7 +150,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         ShowFrame frame = new ShowFrame();
-        frame.setSize(1000, 600);
+        frame.setSize(1100, 800);
         frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.setLocation(50, 50);
         frame.setVisible(true);
