@@ -47,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jTextFieldWord = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jPanelDraw = new javax.swing.JPanel();
+        jPanel1 = new DrawingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,7 +102,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Style", jPanel4);
 
-        jPanel6.add(jTabbedPane1, java.awt.BorderLayout.CENTER);
+        jPanel6.add(jTabbedPane1, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.add(jPanel6, java.awt.BorderLayout.CENTER);
 
@@ -125,20 +125,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_END);
 
-        jPanelDraw.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanelDrawLayout = new javax.swing.GroupLayout(jPanelDraw);
-        jPanelDraw.setLayout(jPanelDrawLayout);
-        jPanelDrawLayout.setHorizontalGroup(
-            jPanelDrawLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 750, Short.MAX_VALUE)
         );
-        jPanelDrawLayout.setVerticalGroup(
-            jPanelDrawLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 570, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanelDraw, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,22 +200,18 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
     
-    @Override
-    public void paint( Graphics g )
-    {
-           g.drawString( "Hallo Lars", 120, 60 );
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JList<String> jListWords;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanelDraw;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextFieldWord;
