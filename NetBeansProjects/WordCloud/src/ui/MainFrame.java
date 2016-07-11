@@ -47,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jTextFieldWord = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jPanel1 = new DrawingPanel();
+        drawingPanel = new DrawingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,18 +125,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_END);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout drawingPanelLayout = new javax.swing.GroupLayout(drawingPanel);
+        drawingPanel.setLayout(drawingPanelLayout);
+        drawingPanelLayout.setHorizontalGroup(
+            drawingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 757, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        drawingPanelLayout.setVerticalGroup(
+            drawingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 577, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(drawingPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -144,9 +144,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         ShowFrame frame = new ShowFrame();
-        frame.setSize(1100, 800);
+        frame.setExtendedState(MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
-        frame.setLocation(50, 50);
         frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -161,6 +160,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
 
             jListWords.setModel(listmodel);
+            
+            
+            
 
         }
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -203,11 +205,11 @@ public class MainFrame extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel drawingPanel;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JList<String> jListWords;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
