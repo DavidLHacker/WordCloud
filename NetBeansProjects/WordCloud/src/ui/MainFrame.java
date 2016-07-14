@@ -57,7 +57,7 @@ public class MainFrame extends javax.swing.JFrame {
         jToolBar1.setMinimumSize(new java.awt.Dimension(16, 30));
         jToolBar1.setPreferredSize(new java.awt.Dimension(100, 30));
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Save");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
