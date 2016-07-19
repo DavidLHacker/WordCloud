@@ -6,16 +6,43 @@
 package ui;
 
 import java.awt.Graphics;
+import java.util.List;
 import javax.swing.JPanel;
+import jdk.nashorn.internal.objects.NativeArray;
 
 /**
  *
  * @author veikkokrypczyk
  */
 public class DrawingPanel extends JPanel{
+    
+    private List<String> words;
+    
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
+       
+        
+        
         g.drawString("Hallo Lars", 200, 200);
+        
     }
+
+    /**
+     * @return the words
+     */
+    public List<String> getWords() {
+        return words;
+    }
+
+    /**
+     * @param words the words to set
+     */
+    public void setWords(List<String> words) {
+        this.words = words;
+    }
+    
+   
+    
+    
 }

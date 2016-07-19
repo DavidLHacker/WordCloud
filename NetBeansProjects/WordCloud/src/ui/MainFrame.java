@@ -47,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jTextFieldWord = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        drawingPanel = new DrawingPanel();
+        drawingPanel = new ui.DrawingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,7 +125,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_END);
 
-        drawingPanel.setBackground(java.awt.Color.white);
+        drawingPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout drawingPanelLayout = new javax.swing.GroupLayout(drawingPanel);
         drawingPanel.setLayout(drawingPanelLayout);
@@ -160,9 +160,9 @@ public class MainFrame extends javax.swing.JFrame {
             for (int i = 0; i < words.size(); i++) {
                 listmodel.addElement(words.get(i));
             }
-
             jListWords.setModel(listmodel);
-            
+            drawingPanel.setWords(words);
+            drawingPanel.repaint();
             
             
 
@@ -207,7 +207,7 @@ public class MainFrame extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel drawingPanel;
+    private ui.DrawingPanel drawingPanel;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
