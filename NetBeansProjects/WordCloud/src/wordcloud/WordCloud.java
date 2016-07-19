@@ -26,7 +26,7 @@ public class WordCloud {
         frame.setTitle("Word Cloud");
         frame.setSize(1000, 620);
         frame.setResizable(false);
-        frame.setLocation(50, 50);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     

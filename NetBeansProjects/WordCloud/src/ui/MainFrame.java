@@ -109,11 +109,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel5.setPreferredSize(new java.awt.Dimension(250, 75));
 
         jTextFieldWord.setMinimumSize(new java.awt.Dimension(100, 27));
-        jTextFieldWord.setPreferredSize(new java.awt.Dimension(200, 27));
+        jTextFieldWord.setPreferredSize(new java.awt.Dimension(205, 27));
         jPanel5.add(jTextFieldWord);
 
         jButton4.setText("Add Word");
-        jButton4.setPreferredSize(new java.awt.Dimension(200, 31));
+        jButton4.setPreferredSize(new java.awt.Dimension(210, 31));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -124,6 +124,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2.add(jPanel5, java.awt.BorderLayout.SOUTH);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_END);
+
+        drawingPanel.setBackground(java.awt.Color.white);
 
         javax.swing.GroupLayout drawingPanelLayout = new javax.swing.GroupLayout(drawingPanel);
         drawingPanel.setLayout(drawingPanelLayout);

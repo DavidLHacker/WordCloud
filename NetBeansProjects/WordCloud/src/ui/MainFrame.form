@@ -180,7 +180,7 @@
                   <Dimension value="[100, 27]"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[200, 27]"/>
+                  <Dimension value="[205, 27]"/>
                 </Property>
               </Properties>
             </Component>
@@ -188,7 +188,7 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Word"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[200, 31]"/>
+                  <Dimension value="[210, 31]"/>
                 </Property>
               </Properties>
               <Events>
@@ -200,6 +200,11 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="drawingPanel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new DrawingPanel();"/>
       </AuxValues>
