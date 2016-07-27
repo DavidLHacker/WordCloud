@@ -164,8 +164,6 @@ public class MainFrame extends javax.swing.JFrame {
             drawingPanel.setWords(words);
             drawingPanel.repaint();
             
-            
-
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
