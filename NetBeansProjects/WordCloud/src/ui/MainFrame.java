@@ -163,7 +163,6 @@ public class MainFrame extends javax.swing.JFrame {
             jListWords.setModel(listmodel);
             drawingPanel.setWords(words);
             drawingPanel.repaint();
-            
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
