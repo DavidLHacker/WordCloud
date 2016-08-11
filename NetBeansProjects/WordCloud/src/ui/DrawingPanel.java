@@ -20,10 +20,11 @@ public class DrawingPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        
-        
-        g.drawString("Test", 200, 300);
-        g.drawString("xyz", 100, 400);
+        if (words != null) {
+            for (String w : words) {
+                g.drawString(w, 200, 300);
+            }
+        }
     }
 
     /**
