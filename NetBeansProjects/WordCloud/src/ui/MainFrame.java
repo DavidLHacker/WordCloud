@@ -37,6 +37,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jToolBar1 = new javax.swing.JToolBar();
         jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JToolBar.Separator();
         jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -47,21 +48,23 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jTextFieldWord = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         drawingPanel = new ui.DrawingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jToolBar1.setBackground(new java.awt.Color(102, 102, 102));
         jToolBar1.setRollover(true);
         jToolBar1.setMaximumSize(new java.awt.Dimension(16, 30));
         jToolBar1.setMinimumSize(new java.awt.Dimension(16, 30));
-        jToolBar1.setPreferredSize(new java.awt.Dimension(100, 30));
+        jToolBar1.setPreferredSize(new java.awt.Dimension(100, 40));
 
-        jButton2.setText("Save");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/res/save32.png"))); // NOI18N
+        jButton2.setToolTipText("Save");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton2);
+        jToolBar1.add(jSeparator1);
 
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -125,20 +128,25 @@ public class MainFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_END);
 
-        drawingPanel.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(3, 3, 3, 3));
+        jPanel1.setLayout(new java.awt.BorderLayout(10, 10));
+
+        drawingPanel.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout drawingPanelLayout = new javax.swing.GroupLayout(drawingPanel);
         drawingPanel.setLayout(drawingPanelLayout);
         drawingPanelLayout.setHorizontalGroup(
             drawingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 757, Short.MAX_VALUE)
+            .addGap(0, 751, Short.MAX_VALUE)
         );
         drawingPanelLayout.setVerticalGroup(
             drawingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 577, Short.MAX_VALUE)
+            .addGap(0, 561, Short.MAX_VALUE)
         );
 
-        getContentPane().add(drawingPanel, java.awt.BorderLayout.CENTER);
+        jPanel1.add(drawingPanel, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,11 +217,13 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JList<String> jListWords;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextFieldWord;
     private javax.swing.JToolBar jToolBar1;
