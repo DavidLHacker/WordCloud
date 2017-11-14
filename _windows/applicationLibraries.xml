@@ -1,0 +1,35 @@
+<application>
+  <component name="libraryTable">
+    <library name="mail">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/mail.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Mail2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/mail.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="poi-3.14-20160307">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/poi-3.14-20160307.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Substance">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/substance-7.2.jar!/" />
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/laf-plugin-7.2.1.jar!/" />
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/laf-widget-6.3.jar!/" />
+        <root url="jar://$USER_HOME$/IdeaProjects/JavaByExample/lib/trident.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</application>
